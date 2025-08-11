@@ -1,0 +1,41 @@
+{
+  "name": "forensecdmx",
+  "version": "1.0.0",
+  "description": "Ferramenta forense para análise de processos, conexões de rede e arquivos no Windows",
+  "author": {
+    "name": "Alexandre",
+    "email": "seuemail@dominio.com",
+    "url": "https://github.com/seuperfil"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "mime-types": "^3.0.1",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.17.1"
+  },
+  "build": {
+    "appId": "com.forensecdmx.app",
+    "productName": "ForensecDMX",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "requestedExecutionLevel": "requireAdministrator",
+      "forceCodeSigning": false,
+      "signAndEditExecutable": false,
+      "verifyUpdateCodeSignature": false
+    }
+  }
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForensecDMX -- 1.0.0</title>
+  <link href="style.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+
+  <button id="menuToggle" class="menu-toggle">☰</button>
+
+<nav id="sideMenu" class="side-menu">
+  <ul>
+    <br><br><br>
+    <li data-section="explorador" class="active">🕵️‍♂️🔍 Explorador de Metadados</li>
+    <li data-section="comparador">🕵️‍♂️🔍 Visualizador Hexadecimal</li>
+    <li data-section="timeline">🕵️‍♂️📅 Linha do Tempo de Acessos</li>
+    <li data-section="connections" id="connectionsMenuItem">🕵️‍♂️🌐 Conexões Suspeitas</li>
+    <li data-section="process" id="processMenuItem">🕵️‍♂️⚙️ Processos</li>
+    <li data-section="pdf" id="pdfMenuItem">🕵️‍♂️📄 Análise de PDF</li>
+  
+  </ul>
+</nav>
+
+  <!-- Explorador de Metadados -->
+  <div id="explorerSection" class="container">
+    <div class="sidebar">
+      <div class="header">
+        <h2>🔍 Explorador de Metadados</h2>
+        <div>
+          <button id="selectFolderBtn">📁 Selecionar Pasta</button>
+          <button id="backBtn" disabled>🔙 Voltar</button>
+        </div>
+      </div>
+      <div id="tree" class="tree-view"></div>
+    </div>
+
+    <div class="content">
+      <h2>Metadados</h2>
+      <pre id="metadata" class="metadata-box"></pre>
+      <div class="buttons-row">
+        <button id="attachBtn">📎 Anexar ao PDF</button>
+        <button id="clearBtn">🗑️ Limpar Anexos</button>
+        <button id="exportBtn">📤 Exportar PDF</button>
+      </div>
+      <h3>Dados Anexados</h3>
+      <pre id="attachedMetadata" class="metadata-box"></pre>
+    </div>
+  </div>
+
+  <!-- Visualizador Hexadecimal -->
+  <div id="hexSection" class="container" style="display:none;">
+    <div class="sidebar">
+      <div class="header">
+        <h2>🔍 Visualizador Hexadecimal</h2>
+        <div>
+          <button id="selectFolderHexBtn">📁 Selecionar Pasta</button>
+          <button id="backHexBtn" disabled>🔙 Voltar</button>
+        </div>
+      </div>
+      <div id="hexTreeView" class="tree-view">
+
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Conteúdo HEX + ASCII</h2>
+      <pre id="hexBox" class="metadata-box"></pre>
+
+            <div class="buttons-row">
+        <button id="attachHexBtn">📎 Anexar Dump HEX</button>
+        <button id="clearHexBtn">🗑️ Limpar Dumps</button>
+        <button id="exportHexBtn">📤 Exportar PDF</button>
+      </div>
+
+      <h3>Dumps HEX Anexados</h3>
+      <pre id="attachedHex" class="metadata-box"></pre>
+
+
+    </div>
+  </div>
+
+
+  <!-- Linha do Tempo de Acessos -->
+  <div id="timelineSection" class="container" style="display:none;">
+    <div class="sidebar">
+      <div class="header">
+        <h2>📅 Linha do Tempo de Acessos</h2>
+        <div>
+          <button id="selectFolderTimelineBtn">📁 Selecionar Pasta</button>
+          <button id="backTimelineBtn" disabled>🔙 Voltar</button>
+        </div>
+      </div>
+      <div id="timelineFileList" class="tree-view"></div>
+    </div>
+    <div class="content">
+      <h2>Gráfico de Acessos</h2>
+      <div class="timeline-chart-container">
+        <canvas id="timelineCanvas"></canvas>
+      </div>
+      <div class="buttons-row">
+       <!-- <button id="exportTimelineBtn">📤 Exportar CSV</button>-->
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- seção de Conexões -->
+<section id="connectionsSection" class="container" style="display:none; flex-direction: row;">
+  
+  <!-- 1. Sidebar de filtros e busca -->
+  <aside id="connectionsSidebar">
+    <h4>Filtros</h4>
+    <input type="text" id="connSearch" placeholder="🔍 Buscar por IP, PID…" />
+
+    <div class="filter-group">
+      <label><input type="radio" name="connFilter" value="all"   checked /> Todas</label>
+      <label><input type="radio" name="connFilter" value="safe"  /> ✅ Confiáveis</label>
+      <label><input type="radio" name="connFilter" value="sus"   /> ⚠️ Suspeitas</label>
+    </div>
+  </aside>
+
+  <!-- 2. Painel principal -->
+  <section class="content-panel">
+    <div class="header">
+      <h3>🕵️ 🌐 Conexões Suspeitas</h3>
+
+    </div>
+
+    <div class="legend">
+      <button id="refreshConnectionsBtn">🔄 Atualizar</button>
+      <span class="label suspicious">⚠️ Suspeita</span>
+      <span class="label trusted">✅ Confiável</span>
+    </div>
+
+    <div id="connList"></div>
+  </section>
+
+</section>
+
+
+
+
+
+
+<!-- seção Process Explorer -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- … -->
+</head>
+<body>
+  <nav id="sideMenu" class="side-menu">
+    <ul>
+      <li data-section="explorador">🔍 Explorador de Metadados</li>
+      <li data-section="comparador">🔢 Visualizador Hexadecimal</li>
+      <li data-section="timeline">🕘 Linha do Tempo</li>
+      <li data-section="process">⚙️ Process Explorer</li>
+    </ul>
+  </nav>
+
+  <!-- … outras seções … -->
+
+  <!-- seção Process Explorer -->
+  <section 
+    id="processSection" 
+    class="container" 
+    style="display:none; flex-direction: row;"
+  >
+    <aside class="sidebar">
+      <div class="header">
+        <h2>⚙️ Process Explorer</h2>
+        <button id="refreshProcessesBtn">🔄 Atualizar</button>
+      </div>
+      <input type="text" id="procSearch" placeholder="🔍 PID, nome…" />
+      <label><input type="checkbox" id="highMemOnly" /> Só > 100 MB</label>
+    </aside>
+    <section class="content">
+      <table id="procTable">
+        <br><br><br><br><br><br>
+        <thead>
+          <tr>
+            <th>PID</th>
+            <th>Nome</th>
+            <th>Usuário</th>
+            <th>Caminho</th>
+            <th>RAM (MB)</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </section>
+
+
+
+
+
+<!-- 📄 Seção de Análise de PDF -->
+<section id="pdfSection" class="container flex">
+    <div class="section-header">
+      <button id="choosePdfBtn">📂 Selecionar PDF</button>
+      <span id="chosenPdf">Nenhum PDF selecionado</span>
+      <button id="analyzePdfBtn">🔎 Analisar PDF</button>
+    </div>
+    <div id="pdfResult" style="overflow:auto; flex:1;">
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Protegido</th>
+            <th>Issues Detectadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="4" style="text-align:center; color:#666;">
+            Selecione um PDF e clique em “🔎 Analisar PDF”
+          </td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Tela de Boas-Vindas -->
+<section id="welcomeScreen" class="container flex" style="height:100vh; justify-content:center; align-items:center;">
+  <div style="text-align:center;">
+    <h1>🕵️‍♂️ ForensecDMX</h1>
+    <p>Ferramenta de análise forense digital</p>
+    <button id="startAppBtn" style="margin-top:20px; padding:8px 16px;">🚀 Iniciar</button>
+  </div>
+</section>
+
+
+
+
+<div id="loading" class="spinner-overlay" style="display:none;">
+    <div class="spinner"></div>
+    <span class="loading-text">Carregando...</span>
+  </div>
+
+ <script src="preload.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
