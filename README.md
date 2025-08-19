@@ -27,11 +27,9 @@ Este projeto tem como objetivo fornecer uma solução integrada para análise fo
 - **Electron** – Framework para criação de aplicativos desktop com JavaScript, HTML e CSS  
 - **Node.js** – Backend leve e eficiente para manipulação de arquivos e processos  
 - **JavaScript** – Lógica principal e integração entre módulos  
-- **Bootstrap** – Interface responsiva e amigável  
-- **SQLite** – Armazenamento local de logs e relatórios
 
 ## 🚀 Como Executar
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Alexandre-Paulo-Silva/forensecDMX
