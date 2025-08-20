@@ -1,18 +1,18 @@
-🕵️ ForensecDMX – Aplicativo de Investigação Digital com Múltiplas Ferramentas Forenses
+🕵️ Aplicativo de Investigação Digital com Múltiplas Ferramentas Forenses
 Este projeto tem como objetivo fornecer uma solução integrada para análise forense digital em ambientes Windows. O aplicativo reúne diversas funcionalidades essenciais para investigações técnicas, permitindo que profissionais da área realizem inspeções detalhadas em arquivos, processos e conexões suspeitas de forma rápida e eficiente.
 
 📦 Funcionalidades
-🔍 Explorador de Metadados Extração de atributos ocultos de arquivos, como datas de criação, modificação, autorias e permissões.
+Explorador de Metadados Extração de atributos ocultos de arquivos, como datas de criação, modificação, autorias e permissões.
 
-🧬 Visualizador Hexadecimal Leitura em baixo nível de arquivos binários, permitindo a identificação de assinaturas digitais e estruturas ocultas.
+Visualizador Hexadecimal Leitura em baixo nível de arquivos binários, permitindo a identificação de assinaturas digitais e estruturas ocultas.
 
-📅 Linha do Tempo de Acessos Organização cronológica de eventos e acessos a arquivos, facilitando a reconstrução de atividades suspeitas.
+Linha do Tempo de Acessos Organização cronológica de eventos e acessos a arquivos, facilitando a reconstrução de atividades suspeitas.
 
-🌐 Conexões Suspeitas Monitoramento de conexões de rede em tempo real, com alerta para padrões anômalos e portas vulneráveis.
+Conexões Suspeitas Monitoramento de conexões de rede em tempo real, com alerta para padrões anômalos e portas vulneráveis.
 
-⚙️ Monitor de Processos Detecção de processos ativos e análise de comportamento, com foco em atividades maliciosas ou não autorizadas.
+Monitor de Processos Detecção de processos ativos e análise de comportamento, com foco em atividades maliciosas ou não autorizadas.
 
-📄 Análise de Arquivos PDF Inspeção de metadados, scripts embutidos e conteúdo oculto em documentos PDF.
+Análise de Arquivos PDF Inspeção de metadados, scripts embutidos e conteúdo oculto em documentos PDF.
 
 🛠️ Tecnologias Utilizadas
 Electron – Framework para criação de aplicativos desktop com JavaScript, HTML e CSS
@@ -22,18 +22,21 @@ Node.js – Backend leve e eficiente para manipulação de arquivos e processos
 JavaScript – Lógica principal e integração entre módulos
 
 🚀 Como Executar
-🔹 Requisitos
+Clone o repositório:
+
+bash
+git clone https://github.com/Alexandre-Paulo-Silva/forensecDMX
+Requisitos:
+
 Node.js (versão 16 ou superior)
 
-Electron (instalado via npm)
+Electron (pré-instalado via npm)
 
 Sistema operacional: Windows 10 ou superior
 
-🔹 Passo a passo
-bash
-# Clone o repositório
-git clone https://github.com/Alexandre-Paulo-Silva/forensecDMX
+Passo a passo:
 
+bash
 # Acesse a pasta do projeto
 cd forensecdmx
 
@@ -42,12 +45,10 @@ npm install
 
 # Execute o aplicativo em modo de desenvolvimento
 npm start
-📥 Instalador
+🔹 Instalador
 Se preferir instalar diretamente sem compilar:
 
 Baixe o instalador disponível em: 🔗 ForensecDMX Setup.exe
 
 ⚠️ Observações
-Execute o aplicativo como administrador para garantir acesso completo às funcionalidades forenses.
-
-O instalador foi gerado com electron-builder e está hospedado via OneDrive.
+Execute a aplicação como administrador para garantir acesso completo às funcionalidades.
