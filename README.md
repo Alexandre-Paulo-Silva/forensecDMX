@@ -33,3 +33,27 @@ Este projeto tem como objetivo fornecer uma solução integrada para análise fo
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Alexandre-Paulo-Silva/forensecDMX
+
+🔹 Requisitos
+Node.js (versão 16 ou superior)
+Electron (pré-instalado via npm)
+Sistema operacional: Windows 10 ou superior
+
+🔹 Passo a passo
+
+# Acesse a pasta do projeto
+cd forensecdmx
+# Instale as dependências
+npm install
+# Execute o aplicativo em modo de desenvolvimento
+npm start
+
+🔹 Instalador
+
+Se preferir instalar diretamente sem compilar:
+Baixe o instalador disponível em: 🔗 [ForensecDMX Setup.exe](https://1drv.ms/u/c/220efbc97bc9fac5/EcDT4Q4tTfJCuHuMQm7r6fIBvLVjo2bDaR109v3Rb9sbCA?e=eEAYHb)
+
+🛠️ Observações
+
+Execute a aplicao como administrador
+
