@@ -43,6 +43,21 @@ Inspeção de metadados, scripts embutidos e conteúdo oculto em documentos PDF.
 - Electron (pré-instalado via `npm`)  
 - Sistema operacional: Windows 10 ou superior
 
+## 📥 Instalador
+
+Se preferir instalar diretamente sem compilar, baixe o instalador executável:
+
+**🔗 [Download do ForensecDMX Setup.exe](https://1drv.ms/u/c/220efbc97bc9fac5/EcDT4Q4tTfJCuHuMQm7r6fIBvLVjo2bDaR109v3Rb9sbCA?e=eEAYHb)**
+
+---
+
+## ⚠️ Observações
+
+- Execute o instalador como **administrador** para garantir acesso completo às funcionalidades.
+- O instalador foi gerado com `electron-builder` e está hospedado via OneDrive.
+- Compatível com **Windows 10 ou superior**.
+
+
 ### 📂 Passo a Passo
 
 ```bash
@@ -57,16 +72,3 @@ npm install
 
 # Execute o aplicativo em modo de desenvolvimento
 npm start
-
-## 📥 Instalador
-
-Se preferir instalar diretamente sem compilar, baixe o instalador executável:
-
-**🔗 [Download do ForensecDMX Setup.exe](https://1drv.ms/u/c/220efbc97bc9fac5/EcDT4Q4tTfJCuHuMQm7r6fIBvLVjo2bDaR109v3Rb9sbCA?e=eEAYHb)**
-
----
-
-## ⚠️ Observações
-- Execute o instalador como **administrador** para garantir acesso completo às funcionalidades.
-- O instalador foi gerado com `electron-builder` e está hospedado via OneDrive.
-- Compatível com **Windows 10 ou superior**.
