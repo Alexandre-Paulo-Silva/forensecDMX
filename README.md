@@ -16,17 +16,31 @@ Extração de atributos ocultos de arquivos, como datas de criação, modificaç
 ### 🧬 Visualizador Hexadecimal  
 Leitura em baixo nível de arquivos binários, permitindo a identificação de assinaturas digitais e estruturas ocultas.
 
+<img width="1088" height="587" alt="Captura de tela de 2025-09-02 12-04-44" src="https://github.com/user-attachments/assets/4b3cd9d6-6ee1-4b9a-bf80-c06a574d07f9" />
+
+
 ### 📅 Linha do Tempo de Acessos  
 Organização cronológica de eventos e acessos a arquivos, facilitando a reconstrução de atividades suspeitas.
+
+<img width="1088" height="587" alt="Imagem colada" src="https://github.com/user-attachments/assets/ca8fc611-1d59-4361-80a6-9ff229484a0b" />
+
 
 ### 🌐 Conexões Suspeitas  
 Monitoramento de conexões de rede em tempo real, com alerta para padrões anômalos e portas vulneráveis.
 
+<img width="1088" height="587" alt="Imagem colada (2)" src="https://github.com/user-attachments/assets/1ceb9574-e575-4904-901d-b064896d8c77" />
+
 ### ⚙️ Monitor de Processos  
 Detecção de processos ativos e análise de comportamento, com foco em atividades maliciosas ou não autorizadas.
 
+<img width="1088" height="587" alt="Imagem colada (2)" src="https://github.com/user-attachments/assets/61e9572f-561a-4943-a88c-78e73c2d836d" />
+
+
 ### 📄 Análise de Arquivos PDF  
 Inspeção de metadados, scripts embutidos e conteúdo oculto em documentos PDF.
+
+<img width="1088" height="587" alt="Captura de tela de 2025-09-02 12-06-29" src="https://github.com/user-attachments/assets/0282fb48-5e73-4c54-bf9f-5ce6275579d9" />
+
 
 ---
 
