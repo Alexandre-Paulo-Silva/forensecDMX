@@ -33,7 +33,8 @@ Monitoramento de conexões de rede em tempo real, com alerta para padrões anôm
 ### ⚙️ Monitor de Processos  
 Detecção de processos ativos e análise de comportamento, com foco em atividades maliciosas ou não autorizadas.
 
-<img width="1088" height="587" alt="Imagem colada (2)" src="https://github.com/user-attachments/assets/61e9572f-561a-4943-a88c-78e73c2d836d" />
+<img width="975" height="530" alt="image" src="https://github.com/user-attachments/assets/b813a69a-77c2-4cf2-9e06-c2fe4f38a3a9" />
+
 
 
 ### 📄 Análise de Arquivos PDF  
