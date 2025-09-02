@@ -10,6 +10,9 @@ Este projeto tem como objetivo fornecer uma solução integrada para análise fo
 ### 🔍 Explorador de Metadados  
 Extração de atributos ocultos de arquivos, como datas de criação, modificação, autorias e permissões.
 
+<img width="1088" height="587" alt="Captura de tela de 2025-09-02 11-58-37" src="https://github.com/user-attachments/assets/5844daee-4f1c-4ded-a61f-19106e208b77" />
+
+
 ### 🧬 Visualizador Hexadecimal  
 Leitura em baixo nível de arquivos binários, permitindo a identificação de assinaturas digitais e estruturas ocultas.
 
